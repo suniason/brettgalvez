@@ -24,8 +24,8 @@ const About: React.FC = () => {
               <div className='md:mx-5'>
                 <div className='text-[2.3rem] font-bold my-10'>Skills</div>
                 <div className='grid grid-cols-3 mt-10 gap-5 text-[1rem]'>
-                  {skills.map(e => (
-                    <div key={e} className='bg-[#0086D5] text-center p-1 px-3 rounded-3xl'>
+                  {skills.map((e, i) => (
+                    <div key={i} className='bg-[#0086D5] text-center p-1 px-3 rounded-3xl'>
                       {e}
                     </div>
                   ))}
