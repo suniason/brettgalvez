@@ -19,7 +19,7 @@ const Card: React.FC<Props> = (prop: Props) => {
       <div className='bg-black rounded-b-2xl'>
         <div className='text-[1.5rem] font-semibold px-3 pt-5'>{prop.name}</div>
         <div className='text-[#0086D5] my-3 mx-5 overflow-clip scrollbar-thin scrollbar-thumb-[#0086D5] scrollbar-thumb-rounded-md'>
-          {prop.langandtech.map((e, i) => (
+          {prop.langandtech?.map((e, i) => (
             <span key={i} className='mx-1'>
               <u>{e}</u>
             </span>
