@@ -44,7 +44,7 @@ const Projects: React.FC = () => {
                 name='Java Server'
                 image='/javaapi.svg'
                 description='This Java server leverages the Spring Boot framework to enable the implementation of CRUD (Create, Read, Update, Delete) operations. The server processes request from users and returns the appropriate response.'
-                langandtech={['Maven', 'Springboot', 'Java', 'JWTToken']}
+                langandtech={['Maven', 'Springboot', 'Java', 'JWT']}
                 status='Ongoing'
               />
             </Pop>
