@@ -21,7 +21,7 @@ const NavEntrance: React.FC<Props> = ({ children }) => {
   }, [isInView, controls])
 
   return (
-    <div ref={ref}>
+    <div ref={ref} className='pb-10'>
       <motion.div
         variants={{ hidden: { opacity: 0, y: -250 }, visible: { opacity: 1, y: 20 } }}
         initial='hidden'
