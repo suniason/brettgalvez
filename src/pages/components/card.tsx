@@ -17,16 +17,18 @@ const Card: React.FC<Props> = (prop: Props) => {
         <Image src={prop.image} width={500} height={100} alt='ChatXpert'></Image>
       </div>
       <div className='bg-black rounded-b-2xl'>
-        <div className='text-[1.5rem] font-semibold px-3 pt-5'>{prop.name}</div>
-        <div className='text-[#0086D5] my-3 mx-5 overflow-clip scrollbar-thin scrollbar-thumb-[#0086D5] scrollbar-thumb-rounded-md'>
+        <div className='md:text-[1.5rem] sm:text-[1.4rem] text-[1.25rem] font-semibold px-3 pt-5'>
+          {prop.name}
+        </div>
+        <div className='text-[#0086D5] my-3 mx-5  scrollbar-thin scrollbar-thumb-[#0086D5] scrollbar-thumb-rounded-md overflow-y-auto break-words md:text-[1rem] text-[.8rem] sm:text-[.9rem]'>
           {prop.langandtech?.map((e, i) => (
-            <span key={i} className='mx-1'>
+            <div key={i} className='mx-1 inline'>
               <u>{e}</u>
-            </span>
+            </div>
           ))}
         </div>
         <div className='p-1'>
-          <div className='overflow-y-scroll scrollbar-thin scrollbar-thumb-[#0086D5] scrollbar-thumb-rounded-md h-[20vh] m-5 p-1'>
+          <div className='overflow-y-scroll scrollbar-thin scrollbar-thumb-[#0086D5] scrollbar-thumb-rounded-md h-[20vh] m-5 p-1 md:text-[1rem] sm:text-[.9rem] text-[.8rem]'>
             {prop.description}
           </div>
         </div>

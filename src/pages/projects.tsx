@@ -15,12 +15,12 @@ const Projects: React.FC = () => {
   }
   return (
     <div className='flex justify-center items-center min-h-[100vh] font-sans relative my-10'>
-      <div className='w-[70%]'>
+      <div className='w-[81%]'>
         <div className='mx-5'>
           <ShowHeader>
-            <div className='text-[3.5rem] font-bold text-[#0086D5]'>PROJECTS</div>
+            <div className='md:text-[3.5rem] text-[2.5rem] font-bold text-[#0086D5]'>PROJECTS</div>
           </ShowHeader>
-          <div className='md:grid md:grid-cols-[50%_50%] gap-5 mt-10'>
+          <div className='grid md:grid-cols-[50%_50%]  gap-5 mt-10'>
             <Pop>
               <Card
                 name='TravelGuide'
@@ -60,7 +60,9 @@ const Projects: React.FC = () => {
           </div>
           <Appear>
             <div className=' m-10  rounded-3xl'>
-              <div className='text-[1.4rem] inline text-[#0086D5]'>Find out more here → </div>{' '}
+              <div className='md:text-[1.4rem] sm:text-[1.2rem] text-[1rem] inline text-[#0086D5]'>
+                Find out more here →{' '}
+              </div>{' '}
               <div className='inline'>
                 <Image
                   src='/github.svg'

@@ -35,10 +35,10 @@ const Contact: React.FC = () => {
       <div className='text-center w-[70%] md:w-[50%]'>
         <OnScroll>
           <div>
-            <div className='text-[4rem] font-bold'>
+            <div className='md:text-[4rem] text-[2.5rem] font-bold'>
               <span className='text-[#0086D5]'>SEND ME A </span> MESSAGE
             </div>
-            <div className='text-[1.5rem] my-3 text-justify'>
+            <div className='md:text-[1.5rem] text-[1rem] my-3 text-justify'>
               I&apos;m excited to collaborate with you and transform your innovative ideas into
               reality. You can reach me through my{' '}
               <motion.span
@@ -64,7 +64,7 @@ const Contact: React.FC = () => {
                   ref={mailRef}
                   onMouseEnter={onHoverIn}
                   onMouseLeave={onHoverOut}
-                  className='text-[1.5rem] font-bold cursor-pointer'
+                  className='md:text-[1.5rem] text-[1rem] font-bold cursor-pointer'
                 >
                   galvezbrett17@gmail.com
                 </span>

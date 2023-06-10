@@ -1,7 +1,6 @@
 import React from 'react'
 import NavEntrance from './naventrance'
 import NavHover from './navhover'
-import ResHover from './reshover'
 import { motion } from 'framer-motion'
 
 export interface Navigation {
@@ -12,8 +11,8 @@ const Navbar: React.FC<Navigation> = (prop: Navigation) => {
   return (
     <NavEntrance>
       <div className='flex justify-center items-center h-[10vh] w-full font-sans'>
-        <div className='md:w-[70%] grid md:grid-cols-2 grid-rows-2'>
-          <div className='flex flex-cols gap-10 md:justify-start justify-center mx-10'>
+        <div className='md:w-[70%] w-[85%] grid md:grid-cols-2 grid-cols-[60%_40%] md:text-[1rem]  text-[.8rem]'>
+          <div className='flex flex-cols gap-10 md:justify-start justify-center md:mx-10'>
             <NavHover>
               <div onClick={() => prop.clicked(1)} className='cursor-pointer'>
                 About
@@ -32,7 +31,7 @@ const Navbar: React.FC<Navigation> = (prop: Navigation) => {
           </div>
           <div className='flex md:justify-end justify-center'>
             <motion.div
-              className='outline outline-[#0086D5] p-2 px-10 font-bold cursor-pointer relative text-[1rem]'
+              className='outline outline-[#0086D5] md:p-2 p-1 md:px-10 px-5 font-bold cursor-pointer relative md:text-[1rem] text-[.8rem]'
               whileHover={{ backgroundColor: '#0086D5' }}
               whileTap={{ backgroundColor: '#33B9D8', outlineColor: '#33B9D8' }}
             >
