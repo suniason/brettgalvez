@@ -59,27 +59,29 @@ const Projects: React.FC = () => {
             </Pop> */}
           </div>
           <Appear>
-            <div className=' m-10  rounded-3xl'>
-              <div className='md:text-[1.4rem] sm:text-[1.2rem] text-[1rem] inline text-[#0086D5]'>
-                Find out more here →{' '}
+            <div className=' m-10  rounded-3xl text-center md:text-left'>
+              <div className='md:text-[1.4rem] sm:text-[1.2rem] text-[1rem] inline text-[#0086D5] '>
+                Find out more here :{' '}
               </div>{' '}
-              <div className='inline'>
-                <Image
-                  src='/github.svg'
-                  width={40}
-                  height={40}
-                  alt='Github'
-                  className='inline mx-2 cursor-pointer'
-                  onClick={githubClicked}
-                />
-                <Image
-                  src='/gitlab.svg'
-                  width={40}
-                  height={50}
-                  alt='Gitlab'
-                  className='inline mx-2 cursor-pointer'
-                  onClick={gitlabClicked}
-                />
+              <div className='md:inline'>
+                <div className='inline'>
+                  <Image
+                    src='/github.svg'
+                    width={40}
+                    height={40}
+                    alt='Github'
+                    className='inline mx-2 cursor-pointer'
+                    onClick={githubClicked}
+                  />
+                  <Image
+                    src='/gitlab.svg'
+                    width={40}
+                    height={50}
+                    alt='Gitlab'
+                    className='inline mx-2 cursor-pointer'
+                    onClick={gitlabClicked}
+                  />
+                </div>
               </div>
             </div>
           </Appear>
