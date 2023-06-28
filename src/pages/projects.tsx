@@ -48,15 +48,15 @@ const Projects: React.FC = () => {
                 status='Ongoing'
               />
             </Pop>
-            {/* <Pop>
+            <Pop>
               <Card
-                name=''
-                image=''
-                description=''
-                langandtech={[]}
-                status=''
+                name='Twitter Clone: Tweeter'
+                image='/tweeter.svg'
+                description='Tweeter is a Twitter clone. It is made to recreate some functionalities and operations from the popular platform, Twitter.'
+                langandtech={['TypeScript', 'Next.js', 'Prisma', 'MongoDB', 'Tailwind', 'React']}
+                status='Finished'
               />
-            </Pop> */}
+            </Pop>
           </div>
           <Appear>
             <div className=' m-10  rounded-3xl text-center md:text-left'>
