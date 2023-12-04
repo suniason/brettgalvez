@@ -8,7 +8,7 @@ const Introduction:React.FC = () => {
     const lname = 'Galvez'
     
     return (
-        <div className='h-[85dvh] w-8/12 flex flex-col justify-center'>
+        <div className='min-h-[85dvh] w-8/12 flex flex-col justify-center'>
             <motion.div variants={sentence} initial="hidden" animate="visible" 
             className='mx-4 text-7xl font-bold'>
                 {name.split("").map((char, index)=>{

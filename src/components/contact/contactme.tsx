@@ -6,7 +6,7 @@ import ContactForm from './form';
 const Contact:React.FC = () => {
     const [mailhovered, setMailhovered] = useState(false)
     return (
-    <div className='text-text-700 h-screen flex flex-col justify-center'>
+    <div className='text-text-700 min-h-screen flex flex-col justify-center'>
         <div className='flex flex-col items-center text-center'>
             <div className='text-5xl font-bold'>Connect With Me</div>
         </div>
