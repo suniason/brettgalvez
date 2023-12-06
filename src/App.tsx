@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useConfigContext } from "./context/appcontext";
-import { Introduction, Navbar, About, Contact, Projects } from "./components";
+import { Introduction, Navbar, Skills, Contact, Projects } from "./components";
 
 function App() {
   const bodytag = document.body;
@@ -15,16 +15,14 @@ function App() {
   },[darkMode, bodytag.classList])
 
   return (
-    <div className={`flex justify-center items-center w-full min-h-screen  `}>
+    <div className={`flex justify-center items-center w-full min-h-screen`}>
       <div className="flex justify-center">
-        <div className='w-full sm:w-9/12'>
           <Navbar>
             <div><Introduction/></div>
-            <div><About/></div>
+            <div><Skills/></div>
             <div><Projects/></div>
             <div><Contact/></div>
           </Navbar>
-        </div>
       </div>
     </div>
   );

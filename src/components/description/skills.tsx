@@ -1,9 +1,20 @@
-import React from 'react'
+import React, { useRef, useEffect } from 'react'
 import { SiTypescript, SiJavascript, SiPython,  SiCss3, SiRust, SiGit, SiReact , SiNextdotjs, SiExpress, SiTailwindcss, SiSpringboot, SiMongodb } from "react-icons/si";
 import { FaJava } from "react-icons/fa";
 import SkillItem from './skillitem';
+import { motion, useInView, useAnimation } from 'framer-motion';
+import { language, text } from '../../utils/variant';
 
 const Skills:React.FC = () => {
+
+    const skillref = useRef<HTMLUListElement | null>(null)
+    const isInView = useInView(skillref,)
+    const controls = useAnimation()
+    useEffect(()=>{
+        if(isInView){
+            controls.start("visible")
+        }
+    },[isInView, controls])
 
     const items = [
         { icon: SiTypescript,name: "Typescript"},
@@ -22,17 +33,19 @@ const Skills:React.FC = () => {
     ]
 
     return (
-        <div>
-            <div className='text-text-700 text-7xl font-extrabold'>SKILLS</div>
-            <div className='flex-col flex'>
-                <ul className='grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 p-5'>
-                    {items.map((val, index)=>(
-                        <li key={index} className='flex-1 flex flex-col items-center m-3 p-6'>
-                        <SkillItem icon={val.icon} name={val.name}/>
-                        </li>
-                    ))}
-                </ul>
-
+        <div className='h-[100dvh] my-10 flex flex-col items-center'>
+            <div className='w-9/12'>
+                <div className='text-text-700 text-7xl font-extrabold'>SKILLS</div>
+                <motion.div variants={text} initial='hidden' animate={controls}
+                className='text-text-700 text-5xl font-bold text-center'>Tech Toolkit</motion.div>
+                    <motion.ul ref={skillref} variants={language} initial='hidden' animate={controls}
+                    className='grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 p-3'>
+                        {items.map((val, index)=>(
+                            <li key={index} className='flex-1 flex flex-col items-center m-3 p-6'>
+                            <SkillItem icon={val.icon} name={val.name}/>
+                            </li>
+                        ))}
+                    </motion.ul>
             </div>
         </div>
     )

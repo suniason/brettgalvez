@@ -32,7 +32,8 @@ const Projects:React.FC = () => {
     ]
 
     return (
-        <div className='min-h-[100dvh] text-text-700 m-20'>
+    <div className='flex justify-center'>
+        <div className='min-h-[100dvh] text-text-700 w-9/12'>
             <div className='font-extrabold text-6xl'>PROJECTS</div>
             {projects.map((val, index)=>(
                 <ProjectItem 
@@ -46,8 +47,9 @@ const Projects:React.FC = () => {
                     tech={val.tech}
                     baseformat={index%2===0}
                 />
-            ))}
+                ))}
         </div>
+    </div>
     )
 }
 

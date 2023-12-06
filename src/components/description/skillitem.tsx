@@ -1,6 +1,8 @@
 import React from 'react'
 import { IconType } from 'react-icons/lib'
 import { useConfigContext } from '../../context/appcontext'
+import {motion} from 'framer-motion'
+import { iconreveal, text } from '../../utils/variant'
 
 interface ItemProps{
     icon: IconType
@@ -13,10 +15,10 @@ const SkillItem:React.FC<ItemProps> = ({icon, name}) => {
     const IconComponent = icon;
     return (
         <>
-            <div><IconComponent color={darkMode?'white':'#142d52'} size={50}/></div>
-            <div className='text-text-800 text-lg'>
+            <motion.div variants={iconreveal} ><IconComponent color={darkMode?'white':'#142d52'} size={50}/></motion.div>
+            <motion.div variants={text} className='text-text-800 text-lg'>
                 {name}
-            </div>
+            </motion.div>
         </>
     )
 }

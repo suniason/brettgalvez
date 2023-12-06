@@ -1,36 +1,21 @@
 import { motion } from 'framer-motion'
 import React from 'react'
-import { letter, sentence } from './variant'
-import Preamble from './preamble'
-import Cube from './cube'
+import { introbg } from '../../utils/variant'
+
+import Cube from '../fun/cube'
+import Identity from './identity'
 
 const Introduction:React.FC = () => {
     const name = 'Brett Josef '
     const lname = 'Galvez'
     
     return (
-        <div className='flex min-h-[80dvh] w-fulll items-center justify-center'>
-            <div className='w-8/12 flex flex-col justify-center'>
-                <motion.div variants={sentence} initial="hidden" animate="visible" 
-                className='mx-4 text-7xl font-bold'>
-                    {name.split("").map((char, index)=>{
-                        return(
-                            <motion.div key={char+index} variants={letter} className='inline text-text-700'>
-                                {char}
-                            </motion.div>
-                        )
-                    })}
-                    {lname.split("").map((char, index)=>{
-                        return(
-                            <motion.div key={char+index} variants={letter} className='inline text-secondary-600'>
-                                {char}
-                            </motion.div>
-                        )
-                    })}
-                </motion.div>
-                <Preamble/>
-            </div>
-            <div className='flex justify-center'>
+        <div className='relative flex h-[90dvh] w-full items-center overflow-hidden'>
+            <motion.div variants={introbg} initial="hidden" animate="visible" 
+            className='w-8/12 flex flex-col justify-center items-center bg-accent-200 p-4'>
+                <Identity name={name} lname={lname}/>
+            </motion.div>
+            <div className='w-4/12 flex items-center justify-center'>
                 <Cube/>
             </div>
         </div>

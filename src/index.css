@@ -7,6 +7,10 @@ body{
   width: 100%;
 }
 
+.navbar{
+  background-color: var(--background-800);
+}
+
 
 .card:hover .wrapper {
   transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0);

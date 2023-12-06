@@ -2,6 +2,8 @@ import React from 'react'
 import { useConfigContext } from '../context/appcontext'
 import { MdDarkMode } from "react-icons/md"
 import { MdLightMode } from "react-icons/md"
+import {motion} from "framer-motion"
+import { navreveal } from '../utils/variant'
 
 interface Props{
     children: React.ReactNode
@@ -17,13 +19,18 @@ const Navbar:React.FC<Props> = ({children}) => {
     }
 
     return (
-    <div className='w-full'>
-        <div className='text-text-100 flex justify-between w-full items-center p-3'>
+    <div>
+        <div className='w-full flex justify-center -z-10'>
+        <motion.div className='w-8/12 text-text-100 flex justify-between items-center p-2'
+        variants={navreveal}
+        initial='hidden'
+        animate='visible'
+    >
             <div>
                 {darkMode?
-                    <img src="/logo-nobg.png"  className='w-16 mx-4' alt="" />
+                    <img src="/logo-nobg.png"  className='w-12 mx-4' alt="" />
                     :
-                    <img src="/logo-bg.png" className='w-16 mx-4' alt="" />
+                    <img src="/logo-bg.png" className='w-12 mx-4' alt="" />
                 }
             </div>
             <ul className='flex items-center'>
@@ -40,6 +47,7 @@ const Navbar:React.FC<Props> = ({children}) => {
                     }
                 </li>
             </ul>
+        </motion.div>
         </div>
         <div>
             <div>
