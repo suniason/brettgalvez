@@ -4,6 +4,7 @@ import { FaJava } from "react-icons/fa";
 import SkillItem from './skillitem';
 import { motion, useInView, useAnimation } from 'framer-motion';
 import { language, text } from '../../utils/variant';
+import Reveal from '../animation/reveal';
 
 const Skills:React.FC = () => {
 
@@ -35,7 +36,11 @@ const Skills:React.FC = () => {
     return (
         <div className='h-[100dvh] my-10 flex flex-col items-center'>
             <div className='w-9/12'>
-                <div className='text-text-700 text-7xl font-extrabold'>SKILLS</div>
+                <div className='text-text-700 text-7xl font-extrabold'>
+                        <div className='flex'>
+                            <Reveal>SKILLS</Reveal>
+                        </div>
+                    </div>
                 <motion.div variants={text} initial='hidden' animate={controls}
                 className='text-text-700 text-5xl font-bold text-center'>Tech Toolkit</motion.div>
                     <motion.ul ref={skillref} variants={language} initial='hidden' animate={controls}

@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect} from "react";
 import { useConfigContext } from "./context/appcontext";
 import { Introduction, Navbar, Skills, Contact, Projects } from "./components";
 

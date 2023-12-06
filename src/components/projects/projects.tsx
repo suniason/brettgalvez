@@ -1,5 +1,6 @@
 import React from 'react'
 import ProjectItem from './projectitem'
+import Reveal from '../animation/reveal'
 
 const Projects:React.FC = () => {
     
@@ -34,7 +35,9 @@ const Projects:React.FC = () => {
     return (
     <div className='flex justify-center'>
         <div className='min-h-[100dvh] text-text-700 w-9/12'>
-            <div className='font-extrabold text-6xl'>PROJECTS</div>
+            <div className='font-extrabold text-6xl'>
+                <div className='flex'><Reveal>PROJECTS</Reveal></div>
+            </div>
             {projects.map((val, index)=>(
                 <ProjectItem 
                     key={index}
