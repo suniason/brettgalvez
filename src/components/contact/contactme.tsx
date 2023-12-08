@@ -7,6 +7,11 @@ import Show from '../animation/show';
 
 const Contact:React.FC = () => {
     const [mailhovered, setMailhovered] = useState(false)
+
+    const copyClicked = () =>{
+        navigator.clipboard.writeText("galvezbrett17@gmail.com");
+    }
+
     return (    
     <div className='flex justify-center w-full'>
         <div className='text-text-700 min-h-screen flex flex-col justify-center md:w-9/12'>
@@ -24,16 +29,18 @@ const Contact:React.FC = () => {
                         </div>
                     </div>                
                     <div className='flex justify-center'>
-                        <div className={`opacity-75 transition-all mx-1 p-1 outline outline-1 outline-accent-800 rounded-md hover:opacity-100 flex items-center bg-white`}
+                        <div className={`opacity-75 transition-all mx-1 p-1 outline outline-1 outline-accent-500 rounded-md hover:opacity-100 flex items-center bg-white text-secondary-500 cursor-pointer duration-400`}
                         onMouseEnter={()=>setMailhovered(true)}
                         onMouseLeave={()=>setMailhovered(false)}
+                        onClick={copyClicked}
                         ><FaRegCopy size={20}/></div>
-                        <div className='bg-white text-center py-2 px-5 rounded-md text-secondary-400
-                        outline outline-1 outline-accent-800 w-80' 
+                        <div className='bg-white hover:bg-background-900 text-center py-2 px-5 rounded-md text-secondary-500 transition-all duration-400 outline outline-1 outline-accent-800 w-80 cursor-pointer' 
                         >
+                            <a href="mailto:galvezbrett17@gmail.com" target="_blank" rel="noreferrer" >
                             <div className='mx-3 font-semibold'>
                                 {mailhovered?'copy the mail address':'galvezbrett17@gmail.com'}
                             </div>
+                            </a>
                     </div>
                     </div>
                     <div>

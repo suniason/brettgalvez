@@ -1,5 +1,6 @@
 import React, {useRef } from 'react'
-import { useAnimationFrame } from "framer-motion";
+import { motion, useAnimationFrame } from "framer-motion";
+import { cubereveal } from '../../utils/variant';
 
 const Cube:React.FC = () => {
     const ref = useRef<HTMLDivElement>(null);
@@ -12,7 +13,8 @@ const Cube:React.FC = () => {
     });
 
     return (
-        <div className="cubecontainer z-100">
+        <motion.div initial='hidden' variants={cubereveal} animate='visible'
+         className="cubecontainer z-100 hidden md:block">
             <div className="cube" ref={ref}>
             <div className="side front" />
             <div className="side left" />
@@ -21,7 +23,7 @@ const Cube:React.FC = () => {
             <div className="side bottom" />
             <div className="side back" />
             </div>
-        </div>
+        </motion.div>
     )
 }
 

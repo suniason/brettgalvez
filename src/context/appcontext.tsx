@@ -19,7 +19,7 @@ export const ConfigProvider: React.FC<ChildrenProps> = ({ children }) => {
     const context = useContext(ConfigContext)
   
     if (context == null) {
-      throw new Error('useRecipeContext must be used within a RecipeProvider')
+      throw new Error('useConfigContext must be used within a ConfigProvider')
     }
   
     return context

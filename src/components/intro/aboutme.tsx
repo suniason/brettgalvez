@@ -3,8 +3,13 @@ import React from 'react'
 const AboutMe :React.FC = () => {
     return (
         <div className='flex justify-center'>
-            <div className='flex items-center w-3/4 px-16 py-8 mb-16 text-text-800 bg-accent-300'>
-                    I possess strong proficiency  in a diverse set of programming languages and technologies. My versatile skillsets position me to deliver efficient and high-quality solutions as I continue on my journey in the field.
+            <div className='flex flex-col justify-center w-3/4 px-16 py-4 mb-4 text-text-800'>
+            <p className='m-2'>
+                Hello, and welcome to my online portfolio! I'm a passionate and dedicated IT student nearing graduation. As a tech enthusiast, I've immersed myself in the dynamic world of information technology, driven by a curiosity to explore and solve complex problems.
+            </p>
+            <p className='m-2'>
+                Let's connect and explore the possibilities of collaboration and growth. I'm excited about the prospect of leveraging technology to make a positive impact.
+            </p>
             </div>
         </div>
     )

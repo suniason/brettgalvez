@@ -9,7 +9,7 @@ const Projects:React.FC = () => {
             name: "BRAMK (Business Resource Access through Modern Knowledge)",
             initial: "mascot.svg",
             videopath: "BRAMK.mp4",
-            description: "An AI-powered customer support application that aims to help MSME automate ",
+            description: "An AI-driven customer support application which aim is to ensure easily accessible customer support, equipped to address common queries promptly, enhancing overall user experience.",
             github: "https://github.com/ainderew/cap-client",
             link: "https://www.bramk.tech/",
             tech: "MERN(MongoDB, Express, React-(Next), Node.js) - GPT API - Langchain", 

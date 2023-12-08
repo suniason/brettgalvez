@@ -12,6 +12,46 @@ const introbg = {
   }
 }
 
+const introimg = {
+  hidden:{
+    opacity:0, 
+  }, 
+  visible:{
+    opacity:1, 
+    transition:{
+      duration: 2,
+    }
+  }
+}
+
+const preambletext = {
+  hidden:{
+    opacity:0, 
+  }, 
+  visible:{
+    opacity: 1, 
+    transition:{
+      delay:2,
+      duration: 1
+    }
+  }
+}
+
+const cubereveal = {
+  hidden: {
+    opacity:0, 
+    scale : 0.2,
+  },
+  visible:{
+    opacity:1, 
+    scale:1,
+    transition:{
+      delay:0.7,
+      duration: 1,
+    }
+  }
+}
+
 const sentence = {
   hidden: {
     opacity : 1
@@ -45,7 +85,7 @@ const language = {
     transition:{
       delay:1,
       delayChildren: 0.5,
-      staggerChildren:0.1,
+      staggerChildren:0.5,
     }
   }
 }
@@ -70,6 +110,9 @@ const iconreveal = {
   visible:{
     opacity:1, 
     scale:1,
+    transition:{
+      duration: 1,
+    }
   }
 }
 
@@ -82,7 +125,7 @@ const navreveal = {
     opacity: 1, 
     y:0,
     transition:{
-      duration: 0.5,
+      duration: 1,
       delay: 0.25,
     }
   }
@@ -117,4 +160,4 @@ const box = {
 }
 
 
-export {introbg, sentence, letter, navreveal, iconreveal, language, text, box, fly}
+export {introbg, sentence, letter, navreveal, iconreveal, language, text, box, fly, cubereveal, preambletext,introimg}
