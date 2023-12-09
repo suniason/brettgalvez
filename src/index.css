@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body{
-  background: var(--background-50);
+  background-image: linear-gradient(to left bottom, #000000, #16070f, #200e1d, #27142d, #271b40, #211d45, #18204b, #072350, #061f47, #051c3f, #051836, #05142e);
   width: 100%;
   font-family: 'Kanit', sans-serif;}
 
