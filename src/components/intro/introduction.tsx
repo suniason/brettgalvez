@@ -52,7 +52,7 @@ const Introduction:React.FC = () => {
             style={{width: widthchange, height: heightchange, top,  borderRadius:rounded, backgroundColor:bgopacity}} ref={ref}
             className='sticky w-8/12 flex flex-col justify-center items-center p-4'>
                 <motion.div style={{opacity, display:imagedisplay}} className='w-40 h-40'>
-                    <img src="IDPIC.jpg" alt="ID" className='rounded-full'/>
+                    <img src="IDPic.svg" alt="ID" className='rounded-full'/>
                 </motion.div>
                 <motion.div className='flex flex-col items-center w-full'>
                     <Identity name={name} lname={lname}/>
