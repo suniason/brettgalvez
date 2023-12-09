@@ -14,7 +14,7 @@ const Cube:React.FC = () => {
 
     return (
         <motion.div initial='hidden' variants={cubereveal} animate='visible'
-         className="cubecontainer z-100 hidden md:block">
+         className="cubecontainer z-100">
             <div className="cube" ref={ref}>
             <div className="side front" />
             <div className="side left" />

@@ -39,16 +39,16 @@ const Skills:React.FC = () => {
     }
 
     return (
-        <div className='h-[100dvh] my-20 flex flex-col items-center'>
-            <div className='w-7/12'>
-                <div className='text-text-700 text-7xl font-extrabold'>
+        <div className='min-h-[100dvh] my-20 flex flex-col items-center'>
+            <div className='w-11/12 md:w-7/12'>
+                <div className='text-text-700 text-4xl md:text-7xl font-extrabold'>
                         <div className='flex'>
                             <Reveal>Tech Toolkit</Reveal>
                         </div>
                     </div>
                     <div className='text-white mt-10'>
                     <motion.ul ref={skillref} variants={language} initial='hidden' animate={controls}
-                    className='grid grid-cols-4 gap-4'>
+                    className='grid grid-cols-2  md:grid-cols-4 gap-4'>
                         <motion.li variants={iconreveal} className='text-center col-span-2 bg-background-100 m-1 p-8 rounded-xl'>
                             <div className='grid grid-cols-2 gap-2'>
                                 {items.language.map((val, index)=>(
@@ -65,8 +65,8 @@ const Skills:React.FC = () => {
                             </div>
                             <div className='mt-5 text-lg font-bold'>Frameworks</div>
                         </motion.li>
-                        <motion.li variants={iconreveal} className='text-center col-span-4 bg-background-100 m-1 p-8 rounded-xl'>
-                            <div  className='grid grid-cols-4 gap-2'>
+                        <motion.li variants={iconreveal} className='text-center col-span-2 md:col-span-4 bg-background-100 m-1 p-8 rounded-xl'>
+                            <div  className='grid grid-cols-2 md:grid-cols-4 gap-2'>
                                 {items.design.map((val, index)=>(
                                     <SkillItem key={index} icon={val.icon} name={val.name}/>
                                     ))}

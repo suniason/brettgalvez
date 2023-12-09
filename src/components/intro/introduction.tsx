@@ -22,9 +22,9 @@ const Introduction:React.FC = () => {
     const textdisplay = useTransform(scrollY,[300, 500, 600, 700],['left','left','center','center',])
 
     //textcontainer
-    const widthchange = useTransform(scrollY,[300, 500, 600, 650, 800],['65%', '80%', '100%', '90%', '80%', ])
+    const widthchange = useTransform(scrollY,[300, 500, 600, 650, 800],['70%', '80%', '100%', '90%', '80%', ])
     const heightchange = useTransform(scrollY,[300, 500, 600, 650, 800],['40vh', '65vh', '70vh', '100dvh', '80dvh'])
-    const rounded = useTransform(scrollY,[ 600, 650, 800],[0, 20, 50])
+    const rounded = useTransform(scrollY,[ 600, 650, 800],[0, 10, 20])
     const top = useTransform(scrollY,[300, 500, 550,  800],['10vh','10vh','0','10vh'])
     const bgopacity = useTransform(scrollY,[300, 500, 600, 700],['#0a285c00', '#0a285c44', '#0a285caa', '#0a285cff'])
 
@@ -47,7 +47,7 @@ const Introduction:React.FC = () => {
     
     return (
         <motion.div style={{ textAlign: textdisplay, justifyContent:justifydisplay}} 
-        className='h-[250dvh] flex items-start'>
+        className='h-[250dvh] flex flex-col md:flex-row items-center text-center md:text-start md:items-start'>
             <motion.div variants={introbg} initial="hidden" animate="visible" 
             style={{width: widthchange, height: heightchange, top,  borderRadius:rounded, backgroundColor:bgopacity}} ref={ref}
             className='sticky w-8/12 flex flex-col justify-center items-center p-4'>
@@ -64,7 +64,7 @@ const Introduction:React.FC = () => {
                     <AboutMe/>
                 </motion.div>
             </motion.div>
-            <motion.div style={{display: cubedisplay}} className='w-4/12 flex items-center justify-center'>
+            <motion.div style={{display: cubedisplay}} className='order-first md:order-last scale-50 md:scale-100 w-4/12 flex items-center justify-center mb-12 md:mb-0'>
                 <Cube/>
             </motion.div>
         </motion.div>

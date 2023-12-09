@@ -24,7 +24,7 @@ const Reveal:React.FC<RevealProps> = ({children}) => {
             <motion.div initial='hidden' variants={fly} animate={controls}>
                 {children}
             </motion.div>
-            <motion.div initial='hidden' animate={slidecontrols}  variants={box} className='absolute top-1 bottom-1  left-0 right-0 bg-background-500 z-100'/>
+            <motion.div initial='hidden' animate={slidecontrols}  variants={box} className='absolute top-1 bottom-1  left-0 right-0 bg-accent-900 z-100'/>
         </div>
     )
 }

@@ -2,6 +2,7 @@
 import React, { useRef } from 'react'
 import { RiExternalLinkLine } from "react-icons/ri";
 import { motion, useScroll, useTransform } from 'framer-motion';
+import { useConfigContext } from '../../context/appcontext';
 interface ItemProps{
     name: string
     initial: string
@@ -14,6 +15,7 @@ interface ItemProps{
 }
 
 const ProjectItem:React.FC<ItemProps> = ({name, initial, videopath, description, github, link, tech, baseformat}) => {
+    const {isMobile} = useConfigContext()
     const projectref = useRef<HTMLDivElement|null>(null)
     const scrollref = useRef<HTMLDivElement|null>(null)
     const {scrollYProgress : projectprogress} = useScroll({
@@ -27,23 +29,23 @@ const ProjectItem:React.FC<ItemProps> = ({name, initial, videopath, description,
     })
 
         //container
-        const textwidth = useTransform(scrollprogress,[0.1, 0.5, 0.8],['100%', '80%', '60%'])
-        const textscale = useTransform(scrollprogress,[0.5, 0.6, 0.8],[1, 0.95, 0.9])
+        const textwidth = useTransform(scrollprogress,[0.1, 0.5, 0.7],['100%', '80%', '60%'])
+        const textscale = useTransform(scrollprogress,[0.5, 0.6, 0.7],[1, 0.95, 0.9])
 
 
     return (
         <motion.div ref={scrollref}  className='h-[250dvh] flex items-start'>
         <motion.div ref={projectref} style={{scale: projectprogress, opacity:projectprogress}}
         className='sticky flex flex-col justify-center p-4 top-0 min-h-screen'>
-                <div className='text-5xl font-bold flex items-center'>
+                <div className=' text-2xl md:text-5xl font-bold flex items-center text-center md:text-start'>
                         {name}
                 </div>
-                <div className='flex py-3 '>
-                <motion.div style={{scale:textscale,width:textwidth}} className={`p-10 flex flex-col justify-center  w-full`}>
-                    <div className='text-xl my-4 leading-relaxed'>
+                <div className='flex flex-col md:flex-row py-3 '>
+                <motion.div style={{scale:isMobile?1:textscale,width:isMobile?'100%':textwidth}} className={`p-10 flex flex-col justify-center  w-full`}>
+                    <div className='text-xl my-4 leading-relaxed text-center md:text-start'>
                         {description}
                     </div>
-                    <div className='flex text-accent-600 mt-12 mb-4'>
+                    <div className='flex justify-center text-accent-600 mt-12 mb-4 text-center md:text-start'>
                         <a href={github} target='_blank' rel="noreferrer" className='flex items-center underline '>
                             <div>Github</div>
                             <RiExternalLinkLine />
@@ -53,19 +55,22 @@ const ProjectItem:React.FC<ItemProps> = ({name, initial, videopath, description,
                             <RiExternalLinkLine />
                         </a>
                     </div>
-                    <div className='text-lg my-4'>
+                    <div className='text-sm md:text-lg my-4 text-center md:text-start'>
                         {tech}
                     </div>
                 </motion.div>
-                <motion.div className={`${!baseformat?"order-first":""} w-full flex justify-center items-center p-2`}>
-                    <div className={` card relative w-full flex justify-center items-center p-2 group`}>
-                        <div className='wrapper absolute transition-all duration-300 '>
+                <motion.div className={`${!baseformat?"md:order-first":"md:order-last"} order-first w-full block justify-center items-center p-2 md:flex`}>
+                    <div className={` ${isMobile?"":"card"} relative w-full flex justify-center items-center p-2 group`}>
+                        <div className={`${isMobile?"":"wrapper absolute"} transition-all duration-300`}>
                             <video src={videopath} autoPlay loop muted controls={false} className='w-full p-2'>
                             </video>
                         </div>
-                        <div className='absolute applogo z-10 flex w-full justify-center'>
-                            <img src={initial} alt={initial} className='h-[40vh] '/>
-                        </div>
+                        {
+                            isMobile &&
+                            <div className='absolute applogo z-10 flex w-full justify-center'>
+                                <img src={initial} alt={initial} className='h-[40vh] '/>
+                            </div>
+                        }
                     </div>
                 </motion.div>
             </div>

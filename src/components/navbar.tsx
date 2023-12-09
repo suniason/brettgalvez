@@ -21,7 +21,7 @@ const Navbar:React.FC<Props> = ({children}) => {
     return (
     <div>
         <div className='w-full flex justify-center -z-10'>
-        <motion.div className='w-8/12 text-text-100 flex justify-between items-center p-2'
+        <motion.div className='w-11/12 md:w-8/12 text-text-100 flex justify-between items-center p-2'
         variants={navreveal}
         initial='hidden'
         animate='visible'
@@ -50,7 +50,7 @@ const Navbar:React.FC<Props> = ({children}) => {
         </motion.div>
         </div>
         <div>
-            <div className='mt-60'>
+            <div className='mt-20 md:mt-60'>
                 {children}
             </div>
         </div>
