@@ -20,23 +20,23 @@ const Navbar:React.FC<Props> = ({children}) => {
 
     return (
     <div>
-        <div className='relative w-full flex justify-center -z-10'>
-        <motion.div className='absolute w-8/12 text-text-100 flex justify-between items-center p-2'
+        <div className='w-full flex justify-center -z-10'>
+        <motion.div className='w-8/12 text-text-100 flex justify-between items-center p-2'
         variants={navreveal}
         initial='hidden'
         animate='visible'
     >
             <div>
                 {darkMode?
-                    <img src="/logo-nobg.png"  className='w-12 mx-4' alt="" />
+                    <img src="/BGwhite.svg"  className='w-12 mx-4' alt="" />
                     :
-                    <img src="/logo-bg.png" className='w-12 mx-4' alt="" />
+                    <img src="/BGdark.svg" className='w-12 mx-4' alt="" />
                 }
             </div>
             <ul className='flex items-center'>
                 <li className='mx-4'>
                     <button 
-                    className='text-text-800 outline outline-2 outline-primary-800 text-md px-6 py-1 hover:bg-primary-800 hover:text-text-400 transition-all duration-500 font-semibold' 
+                    className='text-text-800 outline outline-2 outline-primary-800 text-md px-6 py-1 hover:bg-primary-800 hover:text-text-200 transition-all duration-500 font-semibold z-10' 
                     onClick={handleClick}>Download Resume</button>
                 </li>
                 {/* <li className='mx-4 text-secondary-700'>
