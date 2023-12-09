@@ -66,7 +66,7 @@ const ProjectItem:React.FC<ItemProps> = ({name, initial, videopath, description,
                             </video>
                         </div>
                         {
-                            isMobile &&
+                            !isMobile &&
                             <div className='absolute applogo z-10 flex w-full justify-center'>
                                 <img src={initial} alt={initial} className='h-[40vh] '/>
                             </div>
