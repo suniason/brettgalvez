@@ -31,7 +31,7 @@ const preambletext = {
   visible:{
     opacity: 1, 
     transition:{
-      delay:2,
+      delay:1,
       duration: 1
     }
   }
@@ -61,7 +61,7 @@ const sentence = {
     transition:{
       delay:1,
       delayChildren: 1,
-      staggerChildren:0.1,
+      staggerChildren:0.05,
     }
   }
 }
@@ -84,8 +84,8 @@ const language = {
     opacity:1, 
     transition:{
       delay:1,
-      delayChildren: 0.5,
-      staggerChildren:0.5,
+      delayChildren: 0.2,
+      staggerChildren:0.1,
     }
   }
 }
@@ -140,21 +140,21 @@ const fly = {
     opacity: 1, 
     y:0,
     transition:{
-      duration: 0.5,
-      delay: 0.5,
+      duration: 0.3,
+      delay: 0.3,
     }
   }
 }
 
 const box = {
   hidden:{
-    left:0
+    right:0
   },
   visible:{
-    left: '100%',
+    right: '100%',
     transition:{
-      duration: 0.5,
-      delay: 0.25,
+      duration: 0.3,
+      delay: 0.2,
     }
   }
 }
